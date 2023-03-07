@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -11,7 +12,6 @@ class Input extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      // eslint-disable-next-line no-unused-vars
       hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
@@ -27,6 +27,7 @@ class Input extends React.Component {
             id="nameInput"
             value={ cardName }
             onChange={ onInputChange }
+            name="cardName"
           />
         </label>
         <label htmlFor="description-input">
@@ -37,6 +38,7 @@ class Input extends React.Component {
             id="description-input"
             value={ cardDescription }
             onChange={ onInputChange }
+            name="cardDescription"
           />
         </label>
         <label htmlFor="attr1-input">
@@ -47,6 +49,7 @@ class Input extends React.Component {
             id="attr1-input"
             value={ cardAttr1 }
             onChange={ onInputChange }
+            name="cardAttr1"
           />
         </label>
         <label htmlFor="attr2-input">
@@ -57,6 +60,7 @@ class Input extends React.Component {
             id="attr2-input"
             value={ cardAttr2 }
             onChange={ onInputChange }
+            name="cardAttr2"
           />
         </label>
         <label htmlFor="attr3-input">
@@ -67,6 +71,7 @@ class Input extends React.Component {
             id="attr3-input"
             value={ cardAttr3 }
             onChange={ onInputChange }
+            name="cardAttr3"
           />
         </label>
         <label htmlFor="image-input">
@@ -87,6 +92,7 @@ class Input extends React.Component {
             id="rare-input"
             value={ cardRare }
             onChange={ onInputChange }
+            name="cardRare"
           >
             <option value="normal">Normal</option>
             <option value="raro">Raro</option>
@@ -101,6 +107,7 @@ class Input extends React.Component {
             id="trunfo-input"
             checked={ cardTrunfo }
             onChange={ onInputChange }
+            name="cardTrunfo"
           />
         </label>
         <button
