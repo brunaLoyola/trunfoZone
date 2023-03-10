@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -113,6 +112,7 @@ class Form extends React.Component {
             data-testid="trunfo-input"
             id="trunfo-input"
             checked={ cardTrunfo }
+            { ...hasTrunfo }
             onChange={ onInputChange }
             name="cardTrunfo"
           />
