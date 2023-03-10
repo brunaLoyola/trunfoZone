@@ -50,6 +50,17 @@ class App extends React.Component {
     return 0;
   };
 
+  validacaoHasTrunfo = () => {
+    const { baralho } = this.state;
+
+    const valor = baralho.some((carta) => carta.cardTrunfo);
+    if (valor === false) {
+      return this.setState({
+        hasTrunfo: true,
+      });
+    }
+  };
+
   onInputChange = ({ target }) => {
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -89,7 +100,7 @@ class App extends React.Component {
       cardAttr3: '0',
       cardImage: '',
       cardRare: '',
-    }));
+    }), this.validacaoHasTrunfo);
   };
 
   render() {
